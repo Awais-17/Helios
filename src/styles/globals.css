@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0d1117; /* Deep charcoal/navy */
+  --color-sidebar: #161b22;    /* Slightly lighter sidebar */
+  --color-activity: #010409;   /* Very dark activity bar */
+  --color-border: #30363d;
+  --color-primary: #58a6ff;    /* Bright blue accent */
+  --color-secondary: #21262d;
+  --color-text-main: #c9d1d9;
+  --color-text-dim: #8b949e;
+}
+
+:root {
+  --background: #0d1117;
+  --foreground: #c9d1d9;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 10px;
+  border: 2px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Monaco Customization */
+.monaco-editor {
+  padding-top: 8px;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
